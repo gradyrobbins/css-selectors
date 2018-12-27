@@ -4,19 +4,22 @@ header {
 }
 /* Convert the ul in the navigation element into a series of horizontal links with # as the href value, without bullets, and have some space between them horizontally. */
 header ul {
-    display: flex;
+    /* display: flex; */
     list-style-type: none;
-    flex-direction: row;
-    justify-content: space-evenly;
+    /* flex-direction: row; */
+    /* justify-content: space-evenly; */
 }
-
+header li {
+    display: inline;
+    padding: 5px;
+}
 /* Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag). */
 
 /* Any text in an element with class "disabled" should be colored grey, unless it is inside an anchor tag. If inside an anchor, it should be colored purple. */
 .disabled {
     color: gray;
 }
-a .disabled {
+a .disabled, a.disabled {
     color: purple;
 }
 /* Any text inside an element with a class of "active" should be colored yellow. */
@@ -29,7 +32,7 @@ a .disabled {
 
 
 /* Make the "I'm red" text colored red. */
-.parent div div {
+.parent > div > div {
     color: red;
 }
 
@@ -50,7 +53,7 @@ a .disabled {
 
 
 /* Any h4 that is a direct child of grandparent should have a 1px border with rounded corners. */
-section > div > div + h4 {
+.grandparent > h4 {
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
@@ -66,6 +69,6 @@ section > div > div + h4 {
 }
 
 /* Without adding any other attributes to the input fields in the footer, write a CSS selector that makes any text input field have a height of 25px.   */
-input {
+footer input {
     height: 25px;
 }
